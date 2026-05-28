@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruiter Home - Campus Placement Portal</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-content">
+        <h1>Recruiter Dashboard</h1>
+        <a class="link-btn secondary small-btn" href="/login">Logout</a>
+      </div>
+    </header>
+
+    <main class="dashboard-container recruiter-grid">
+      <section class="card">
+        <h2 id="job-form-title">Post a Job</h2>
+        <p class="subtitle">Publish a new opportunity for students.</p>
+
+        <form id="job-form">
+          <label for="title">Job Title</label>
+          <input id="title" name="title" type="text" required />
+
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" placeholder="Confidential" />
+
+          <label for="location">Location</label>
+          <input id="location" name="location" type="text" placeholder="Not specified" />
+
+          <label for="job_type">Job Type</label>
+          <select id="job_type" name="job_type">
+            <option value="full-time">Full-time</option>
+            <option value="internship">Internship</option>
+          </select>
+
+          <label for="work_mode">Work Mode</label>
+          <select id="work_mode" name="work_mode">
+            <option value="on-site">On-site</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="remote">Remote</option>
+          </select>
+
+          <label for="salary">Salary</label>
+          <input id="salary" name="salary" type="text" placeholder="Not disclosed" />
+
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="4"
+            placeholder="Add key responsibilities and requirements"
+          ></textarea>
+
+          <div class="form-actions">
+            <button id="job-submit-btn" type="submit">Publish Job</button>
+            <button id="cancel-edit-btn" class="secondary-btn" type="button">
+              Cancel Edit
+            </button>
+          </div>
+        </form>
+        <p id="job-message" class="message"></p>
+      </section>
+
+      <section class="card">
+        <div class="jobs-header">
+          <h2>Recent Job Posts</h2>
+          <button id="refresh-jobs-btn" class="secondary-btn" type="button">Refresh</button>
+        </div>
+        <p id="recruiter-identity" class="subtitle"></p>
+        <div id="recruiter-jobs-list" class="jobs-scroll-list"></div>
+      </section>
+    </main>
+
+    <script src="/recruiter_home.js"></script>
+  </body>
+</html>

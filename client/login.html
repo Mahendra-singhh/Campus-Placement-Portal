@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Campus Placement Portal</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container auth-container">
+      <section class="card auth-card">
+        <h1>Login</h1>
+        <p class="subtitle">Use your registered credentials</p>
+
+        <form id="login-form">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required />
+
+          <button type="submit">Login</button>
+        </form>
+
+        <p id="login-message" class="message"></p>
+        <p>
+          New here?
+          <a class="inline-link" href="/signup">Create an account</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="./login.js"></script>
+  </body>
+</html>

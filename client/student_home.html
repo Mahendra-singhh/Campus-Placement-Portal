@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Home - Campus Placement Portal</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-content">
+        <h1>Student Job Board</h1>
+        <a class="link-btn secondary small-btn" href="/login">Logout</a>
+      </div>
+    </header>
+
+    <main class="dashboard-container">
+      <section class="card filter-card">
+        <div class="search-row">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search by role, company, or keyword"
+          />
+          <button id="search-btn" type="button">Search</button>
+        </div>
+
+        <div class="filters-row">
+          <select id="location-filter">
+            <option value="">All Locations</option>
+          </select>
+          <select id="job-type-filter">
+            <option value="">All Job Types</option>
+          </select>
+          <select id="work-mode-filter">
+            <option value="">All Work Modes</option>
+          </select>
+          <button id="clear-filters-btn" class="secondary-btn" type="button">
+            Clear
+          </button>
+        </div>
+      </section>
+
+      <section class="card jobs-card">
+        <div class="jobs-header">
+          <h2>Available Opportunities</h2>
+          <span id="results-count" class="results-count"></span>
+        </div>
+        <p id="jobs-message" class="message"></p>
+        <div id="jobs-list" class="jobs-scroll-list"></div>
+      </section>
+    </main>
+
+    <script src="/student_home.js"></script>
+  </body>
+</html>
